@@ -20,33 +20,6 @@
 
 <body>
 
-  <div class="loader-wrapper">
-		<img class="img-fluid loader" src="arca_loading.gif">
-	</div>
-
-  <script>
-    $(window).on("load", function() {
-      $(".loader-wrapper").fadeOut("slow");
-      $(document.body).css('overflow', 'auto');
-
-      let h = document.body.scrollHeight;
-      let w = document.body.scrollWidth;
-
-      $(".button").each(function(i) {
-          $(this).css('left', w * 6.70 / 100)
-      });
-
-      $("#modular").css("top", h * 13.89 / 100)
-      $("#colapsar").css("top", h * 33.19 / 100)
-      $("#destruir").css("top", h * 48.23/ 100)
-      $("#crear").css("top", h * 80.54 / 100)
-
-      console.log(h);
-    });
-</script>
-
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">AC Test</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -534,7 +507,30 @@
 
   </div>
 
+  <div class="loader-wrapper">
+		<img class="img-fluid loader" src="arca_loading.gif">
+	</div>
 
+  <script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
+      $(document.body).css('overflow', 'auto');
+
+      let h = document.body.scrollHeight;
+      let w = document.body.scrollWidth;
+
+      $(".button").each(function(i) {
+          $(this).css('left', w * 6.70 / 100)
+      });
+
+      $("#modular").css("top", h * 13.89 / 100)
+      $("#colapsar").css("top", h * 33.19 / 100)
+      $("#destruir").css("top", h * 48.23/ 100)
+      $("#crear").css("top", h * 80.54 / 100)
+
+      console.log(h);
+    });
+</script>
 
 
   </body>
