@@ -6,7 +6,7 @@ body{
   overflow-y: hidden;
   overflow-x: hidden;
   margin: 0%;
-  background-image: url("https://images5.alphacoders.com/956/thumb-1920-956578.jpg");
+  background-color: #F9F6E5;
   font-family: 'HummingD' ;
   color: white;
   font-size: 20px;
@@ -41,8 +41,8 @@ animation-fill-mode: forwards;
 
 
  .form-check{
-  font-size: 22px;
-  background-color: gray;
+  font-size: 20px;
+  background-color: #00BCAB;
   color: #fff;
   border: 0px;
   cursor: pointer;
@@ -51,47 +51,66 @@ animation-fill-mode: forwards;
   padding:1em;
   margin-top: 10px;
   margin-bottom: 10px;
+ 
 }
 
 
 .form-check:hover{
-  background-color: black;
+  background-color: #FFDE84;
+  color: #FC5A63;
 }
 
 
-.form-check{
-  padding:5px 0; 
- }
- .form-check-input {
-     opacity: 0;
-     position: absolute;
- }
- .form-check-label {
-     height: 38px;
-     display: inline-block;
-     cursor:pointer;
- }
 
-
-.form-check-input+.form-check-label:before{
-  content: '';
-  border: 2px solid #bbbcbc;
-  display: inline-block;
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  padding: 2px;
-  margin-right: 10px;
-  border-radius:50%;
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
 }
-.form-check-input:checked+.form-check-label:after {
-  display:block;
-  border-radius:50%;
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+
 }
-
-
-.form-check-input:checked+.form-check-label:before {
-  border: 2px solid #009966;
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #FC5A63;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 /* FIN CAJA */
@@ -101,7 +120,7 @@ h1{
   margin: 0px;
   padding: 10px;
   font-size: 30px;
-  color: #fff;
+  color: #7F7B70;
   font-family: 'HummingB';
 }
 
@@ -134,12 +153,9 @@ label {
   text-align: center !important;
 }
 
-
-
-
 button{
 	font-size: 22px;
-	background-color: gray;
+	background-color: #00BCAB;
 	color: #fff;
 	border: 0px;
 	padding: 20px;
@@ -188,7 +204,7 @@ button:hover{
 }
 
   p {
-    color: white;
+    color: #7F7B70;
     font-family: 'HummingD' ;
     letter-spacing: 0.5px;
     font-size: 20px;
@@ -225,6 +241,12 @@ html {
 }
 
 @media only screen and (max-width: 1024px) {
+
+  html {
+    overflow-x: hidden;
+    overflow-y: auto;
+ }
+
   .display-4 {
   font-size: 22px;
   }
@@ -237,10 +259,6 @@ html {
     max-width: 100vh;
   }
 
-  .body {
-    overflow-x: hidden;
-  }
-  
   }
 
   .loader-wrapper {
@@ -260,3 +278,22 @@ html {
     animation: loader 3s infinite ease;
     z-index: +10;
   }
+
+
+  .navbar {
+    background-color: #00BCAB;
+  
+  }
+
+
+  .mt-3 {
+    color: #7F7B70;
+  }
+
+
+  html {
+    overflow: hidden;
+}
+.overflow {
+    overflow-x: hidden;
+}
