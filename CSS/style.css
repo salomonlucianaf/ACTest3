@@ -8,8 +8,9 @@ body{
   margin: 0%;
   background-color: #F9F6E5;
   font-family: 'HummingD' ;
-  color: white;
+  color:#F9F6E3;
   font-size: 20px;
+  background-image: url('https://i.redd.it/y5mzeig307b41.png');
 }
 
 .testbody {
@@ -43,7 +44,7 @@ animation-fill-mode: forwards;
  .form-check{
   font-size: 20px;
   background-color: #00BCAB;
-  color: #fff;
+  color: #F9F6E3;
   border: 0px;
   cursor: pointer;
   padding: 13px;
@@ -87,7 +88,7 @@ animation-fill-mode: forwards;
     height: 18px;
     border: 1px solid #ddd;
     border-radius: 100%;
-    background: #fff;
+    background: #F9F6E3;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
@@ -195,7 +196,7 @@ button:hover{
 
 .jumbotron {
 	background: none;
-	color: white;
+	color: #F9F6E3;
 	text-align: center;
 }
 
@@ -212,13 +213,13 @@ button:hover{
   }
 
   .btn-primary {
-    color: white;
+    color: #F9F6E3;
     background-color: #885B48;
     border-color: #885B48;
 }
 
 .btn-primary:hover {
-  color: white;
+  color: #F9F6E3;
   background-color: #16151A;
   border-color: #16151A;
 }
@@ -230,7 +231,6 @@ button:hover{
   justify-content: center;
 }
 
-
 .container {
   height: 100vh;
 }
@@ -240,26 +240,6 @@ html {
   font-size: 1rem;
 }
 
-@media only screen and (max-width: 1024px) {
-
-  html {
-    overflow-x: hidden;
-    overflow-y: auto;
- }
-
-  .display-4 {
-  font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .col-auto {
-    max-width: 100vh;
-  }
-
-  }
 
   .loader-wrapper {
     width: 100%;
@@ -282,7 +262,26 @@ html {
 
   .navbar {
     background-color: #00BCAB;
+    padding:20px;
+   
   
+  }
+
+  nav .navbar-nav li a, .navbar-brand {
+    color: #F9F6E3;
+  }
+
+  .navbar-brand:hover {
+   color: #FC5A63;
+
+  }
+
+  .dropdown-item {
+    color: #7F7B70 !important;
+  }
+
+  .dropdown-menu {
+    background-color: #F9F6E3;
   }
 
 
@@ -291,9 +290,42 @@ html {
   }
 
 
+
+html {
+  overflow: hidden;
+}
+
+.overflow { 
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+ 
+@media only screen and (max-width: 1024px) {
   html {
-    overflow: hidden;
-}
-.overflow {
     overflow-x: hidden;
-}
+    overflow-y: auto;
+  }
+  .display-4 {
+  font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .col-auto {
+    max-width: 100vh;
+  }
+  .overflow {
+    overflow-y: auto;
+  }
+  }
+
+
+  .dropdown-item:hover{
+    background-color: #ECE5CB;
+  }
+
+  .nav-link:hover {
+    color: #FFCA46;
+  }
