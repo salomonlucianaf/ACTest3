@@ -21,9 +21,9 @@ var inputs = document.querySelectorAll('input[name="question1"]');
 //el puntaje mas alto que puedo sacar en TOTAL en el test
 maxValue = max * totalquestion 
 
+//valores maximos
 console.log(max)
 console.log(maxValue)
-
 
 //scores
 scoreIsabelle =  ((19 / 100) * maxValue).toFixed();
@@ -31,6 +31,8 @@ scoreBlathers = ((39 / 100) * maxValue).toFixed();
 scoreTomNook = ((59 / 100) * maxValue).toFixed();
 scoreKK = ((79 / 100) * maxValue).toFixed();
 
+
+//chequeando que funcione
 console.log("Isabelle " + scoreIsabelle)
 console.log("Blathers " + scoreBlathers)
 console.log("Tom Nook " + scoreTomNook)
@@ -42,27 +44,34 @@ console.log("KK " + scoreKK)
   $('#ResBlathers').hide();
   $('#ResKK').hide();
   $('#ResCeleste').hide();
+  $('#reiniciar').hide();
 
-  $("#enviar").click(function(){
-  
+
+  //cuando apreto enviar por primera vez
+
+  $("#enviar").click(function(){ 
+  $('#reiniciar').fadeIn();
   res.pa = res.pa +1
   var resaux = res.pa+1
   var radioSelected = 'question' + res.pa
   var ultima = $("#q"+res.pa ).data("ultima")
-  
   var opcion = $("input[name='"+radioSelected+"']:checked").val(); //chequea que siempre haya algo tildado
   res.score = res.score + parseInt(opcion)
-  
-  console.log("res.pa es igual a " + res.pa + " y el es " + res.score)
+
+
+
+  console.log("la pregunta anterior es igual a " + res.pa + " y el puntaje actual es " + res.score)
   
   $('#q'+res.pa).fadeOut(function () {
+
+
     if (ultima=="yes"){ //cuando es la ultima pregunta muestra lo siguiente
-      $("#enviar").fadeOut();        
+      $("#enviar").fadeOut();    
+      $("#reiniciar").fadeOut();
 
   switch (true) {
       case res.score <= scoreIsabelle:
         $('#ResCanela').fadeIn();
-          
           break;
 
       case (res.score <= scoreBlathers) && (res.score > scoreIsabelle):
@@ -82,8 +91,6 @@ console.log("KK " + scoreKK)
           break;
   }
   
-  $('#contenedorRes').fadeIn();
-  
         } else {
           $('#q'+resaux).fadeIn(); //cuando -no- es la ultima pregunta muestra la siguente
         }
@@ -91,8 +98,13 @@ console.log("KK " + scoreKK)
     });
   });
   
+ 
+  
   //objeto pregunta
+
   function Respuestas (pa) { //pa= pregunta actual
     this.pa = 0;
     this.score = 0;
   }
+
+
