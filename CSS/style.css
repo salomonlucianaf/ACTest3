@@ -212,17 +212,6 @@ button:hover{
     padding-left: 1%;
   }
 
-  .btn-primary {
-    color: #F9F6E3;
-    background-color: #885B48;
-    border-color: #885B48;
-}
-
-.btn-primary:hover {
-  color: #F9F6E3;
-  background-color: #16151A;
-  border-color: #16151A;
-}
 
 
 .flex1 {
@@ -247,7 +236,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #141414;
+    background-color:#00BCAB;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -328,4 +317,26 @@ html {
 
   .nav-link:hover {
     color: #FFCA46;
+  }
+
+  .btn {
+    background-color:#00BCAB ;
+    border-width:0;
+    color: #ECE5CB;
+  }
+
+  .btn:hover {
+    background-color: #FC5A63;
+    color: #ECE5CB;
+    border-width:0;
+  }
+
+  .btn:focus {
+    border-width:0;
+  
+  }
+
+  .btn-lg:focus {
+    border-width:0;
+    background-color: #FC5A63;
   }
