@@ -85,9 +85,7 @@ animation-fill-mode: forwards;
   border-radius:50%;
 }
 .form-check-input:checked+.form-check-label:after {
-  content:"";
   display:block;
-  background:#009966;
   border-radius:50%;
 }
 
@@ -238,6 +236,11 @@ html {
   .col-auto {
     max-width: 100vh;
   }
+
+  .body {
+    overflow-x: hidden;
+  }
+  
   }
 
   .loader-wrapper {
