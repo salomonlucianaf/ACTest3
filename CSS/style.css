@@ -1,0 +1,230 @@
+
+body{
+	font-size: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0%;
+  background-image: url("https://images5.alphacoders.com/956/thumb-1920-956578.jpg");
+  font-family: 'HummingD' ;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+ /*CSS DE LAS CAJAS*/
+
+
+
+
+
+ .form-check{
+  font-size: 22px;
+  background-color: gray;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 10px;
+  padding:1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.form-check:hover{
+  background-color: black;
+}
+
+
+.form-check{
+  padding:5px 0; 
+ }
+ .form-check-input {
+     opacity: 0;
+     position: absolute;
+ }
+ .form-check-label {
+     height: 38px;
+     display: inline-block;
+     cursor:pointer;
+ }
+
+
+.form-check-input+.form-check-label:before{
+  content: '';
+  border: 2px solid #bbbcbc;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin-right: 10px;
+  border-radius:50%;
+}
+.form-check-input:checked+.form-check-label:after {
+  content:"";
+  display:block;
+  background:#009966;
+  border-radius:50%;
+}
+
+
+.form-check-input:checked+.form-check-label:before {
+  border: 2px solid #009966;
+}
+
+/* FIN CAJA */
+
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'HummingB';
+}
+
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+#divcentrar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-check {
+  text-align: left;
+}
+
+label {
+  text-align: center !important;
+}
+
+
+
+
+button{
+	font-size: 22px;
+	background-color: gray;
+	color: #fff;
+	border: 0px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+
+button:hover{
+	background-color: black;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+.indexBackground {
+  z-index: 950;
+}
+
+
+.jumbotron {
+	background: none;
+	color: white;
+	text-align: center;
+}
+
+.display-4 {
+  font-family: 'HummingB';
+}
+
+  p {
+    color: white;
+    font-family: 'HummingD' ;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    padding-left: 1%;
+  }
+
+  .btn-primary {
+    color: white;
+    background-color: #885B48;
+    border-color: #885B48;
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: #16151A;
+  border-color: #16151A;
+}
+
+
+.flex1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.container {
+  height: 100vh;
+}
+
+
+html {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .display-4 {
+  font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .col-auto {
+    max-width: 100vh;
+  }
+  }
+
+
+
+  .clicked {
+    background-color: yellow;
+  }
+
+ 
