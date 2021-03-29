@@ -1,8 +1,6 @@
 $( document ).ready(function() {
 
   var res = new Respuestas (0);
-
-  //la cantidad de preguntas que tengo
   var totalquestion = 0;
    $(".divpregunta").each(function() {
          totalquestion = totalquestion + 1;
@@ -11,34 +9,22 @@ $( document ).ready(function() {
          }
       });
 
-//el puntaje más alto por respuesta
 var inputs = document.querySelectorAll('input[name="question1"]');
   var max =0;
     for (var i = 0; i < inputs.length; ++i) {
       max =  Math.max(max , parseInt(inputs[i].value));         
         }
     
-//el puntaje mas alto que puedo sacar en TOTAL en el test
 maxValue = max * totalquestion 
 
-//valores maximos
 console.log(max)
 console.log(maxValue)
 
-//scores
 scoreIsabelle =  ((19 / 100) * maxValue).toFixed();
 scoreBlathers = ((39 / 100) * maxValue).toFixed();
 scoreTomNook = ((59 / 100) * maxValue).toFixed();
 scoreKK = ((79 / 100) * maxValue).toFixed();
 
-
-//chequeando que funcione
-console.log("Isabelle " + scoreIsabelle)
-console.log("Blathers " + scoreBlathers)
-console.log("Tom Nook " + scoreTomNook)
-console.log("KK " + scoreKK)
-
-  
   $('#ResCanela').hide();
   $('#ResTomNook').hide();
   $('#ResBlathers').hide();
@@ -46,8 +32,6 @@ console.log("KK " + scoreKK)
   $('#ResCeleste').hide();
   $('#reiniciar').hide();
 
-
-  //cuando apreto enviar por primera vez
 
   $("#enviar").click(function(){ 
   $('#reiniciar').fadeIn();
@@ -65,7 +49,7 @@ console.log("KK " + scoreKK)
   $('#q'+res.pa).fadeOut(function () {
 
 
-    if (ultima=="yes"){ //cuando es la ultima pregunta muestra lo siguiente
+    if (ultima=="yes"){ 
       $("#enviar").fadeOut();    
       $("#reiniciar").fadeOut();
       $('.titulo').fadeOut();
@@ -93,7 +77,7 @@ console.log("KK " + scoreKK)
   }
   
         } else {
-          $('#q'+resaux).fadeIn(); //cuando -no- es la ultima pregunta muestra la siguente
+          $('#q'+resaux).fadeIn();
         }
       });
     });
@@ -101,7 +85,7 @@ console.log("KK " + scoreKK)
   
  
   
-  //objeto pregunta
+
 
   function Respuestas (pa) { //pa= pregunta actual
     this.pa = 0;
