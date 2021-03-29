@@ -10,7 +10,7 @@ body{
   font-family: 'HummingD' ;
   color:#F9F6E3;
   font-size: 20px;
-  background-image: url('https://i.redd.it/y5mzeig307b41.png');
+  background-image: url('https://cdn.discordapp.com/attachments/328711409464639488/825854465349255248/background.jpg');
 }
 
 .testbody {
@@ -288,8 +288,21 @@ html {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+
+.imgResultado {
+  width:500px;
+  height: auto;
+}
  
 @media only screen and (max-width: 1024px) {
+
+  .imgResultado {
+    width:200px;
+    height: auto;
+  }
+
+
   html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -322,7 +335,7 @@ html {
   .btn {
     background-color:#00BCAB ;
     border-width:0;
-    color: #ECE5CB;
+    color: #F9F6E3;
   }
 
   .btn:hover {
@@ -339,4 +352,8 @@ html {
   .btn-lg:focus {
     border-width:0;
     background-color: #FC5A63;
+  }
+
+  .spanclass {
+    width: 200px;
   }

@@ -68,6 +68,7 @@ console.log("KK " + scoreKK)
     if (ultima=="yes"){ //cuando es la ultima pregunta muestra lo siguiente
       $("#enviar").fadeOut();    
       $("#reiniciar").fadeOut();
+      $('.titulo').fadeOut();
 
   switch (true) {
       case res.score <= scoreIsabelle:
