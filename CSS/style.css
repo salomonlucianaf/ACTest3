@@ -303,6 +303,17 @@ html {
   }
 
 
+  @media (max-width:1366px){
+    html {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    .overflow {
+    overflow-y: auto;
+    }
+    }
+
+
   html {
     overflow-x: hidden;
     overflow-y: auto;
